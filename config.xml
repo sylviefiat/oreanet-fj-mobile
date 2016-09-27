@@ -3,20 +3,20 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "nc.oreanet-fj.mobile"
         versionCode = "1" 
-        version     = "0.0.2" >
+        version     = "0.0.3" >
 
     <!-- versionCode is optional and Android only -->
 
     <name>Oreanet FJ</name>
 
     <description>
-        Oreanet FJ Mobile app. 
+        Help us prevent Crowns of thorns risks on coral reef ecosystems by reporting them using Oreanet FJ mobile application.
     </description>
    
     <icon src="pin5-oreanet.png" />
 
-    <author href="https://umr-entropie.ird.nc" email="sylvie.fiat@ird.fr">
-        Sylvie Fiat
+    <author href="https://oreanet-fj.ird.nc" email="sylvie.fiat@ird.fr">
+        IRD, FIDJI USP
     </author>
     
     <!--

@@ -165,7 +165,7 @@ if(!bg){
 				distanceWidgetRadius: 30,  /* meters */
                 appendToAddressString: '',
                 geocoderOptions: {
-					language: "fr"
+					language: "en"
                 },
                 typeaheadOptions: {
                     source: that.source,
@@ -182,7 +182,7 @@ if(!bg){
 				
 				// internationalization
 				text: {
-					you_are_here: "Vous êtes ici",
+					you_are_here: "You are here",
 				},
 				map_rendered: false,
             }, options);

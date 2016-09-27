@@ -23,7 +23,7 @@ var app = {
     // Application Constructor
     initialize: function() {    	
         this.bindEvents();		
-	/*setTimeout(function(){app.receivedEvent('deviceready');},2000);*/
+	setTimeout(function(){app.receivedEvent('deviceready');},2000);
 	
     },
     // Bind Event Listeners
