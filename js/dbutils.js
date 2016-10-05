@@ -252,7 +252,7 @@ var db = {
         transaction.executeSql(sql.SELECTCOTLIST, [], function(transaction, results) {
             console.log("Nombre de formulaire(s) a consulter "+ results.rows.length);
 
-        	app.updateMsg("You have " + results.rows.length + " pending form(s). Thank you for helping us to protect Fiji's reefs.");
+        	app.updateMsg("You have " + results.rows.length + " form(s) to complete. Thank you for helping us to protect Fiji's reefs.");
 
             for (i = 0; i < results.rows.length; i++){ 
             	var mois_month = results.rows.item(i).observation_month;

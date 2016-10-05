@@ -202,14 +202,14 @@ var app = {
                 console.log("validation");
                 if($("#form-cot_admin" ).valid()){
                     //message pour le formulaire sélectionné
-                    app.updateMsg("This form is awaiting completion. There are "+ $("#form-cot_admin" ).validate().numberOfInvalids() +" fields missing. <a href='#' onclick='return app.cancel()'>Back to the list</a>");
+                    app.updateMsg("Your form is incomplete. There are "+ $("#form-cot_admin" ).validate().numberOfInvalids() +" field(s) missing. <a href='#' onclick='return app.cancel()'>Back to the list</a>");
                     if(document.getElementById("btn-send") != null){
                         document.getElementById("btn-send").id = "btn-send-valid";
                     }
                 } 
                 else {
                     //message pour le formulaire sélectionné
-                    app.updateMsg("This form is awaiting completion. There are "+ $("#form-cot_admin" ).validate().numberOfInvalids() +" fields missing. <a href='#' onclick='return app.cancel()'>Back to the list</a>");
+                    app.updateMsg("Your form is incomplete. There are "+ $("#form-cot_admin" ).validate().numberOfInvalids() +" field(s) missing. <a href='#' onclick='return app.cancel()'>Back to the list</a>");
                     if(document.getElementById("btn-send-valid") != null){
                         document.getElementById("btn-send-valid").id = "btn-send";
                     }
@@ -363,7 +363,7 @@ var app = {
             function(){
                 document.getElementById("lien-site-web").id = "lien-site-web-off";
                 
-                document.getElementById("msg-fin-enregistre").innerHTML = "The form was completed and is awaiting an internet connection to be sent.";
+                document.getElementById("msg-fin-enregistre").innerHTML = "Your form was successfully saved and will be sent when you next connect to Internet.";
             },
             // si on EST connecté
             function(){
