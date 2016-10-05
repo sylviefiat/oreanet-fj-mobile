@@ -203,8 +203,8 @@ var db = {
     });
     },
 
-    //On vérifie si list existe
-    listExist: function(){
+    //On vérifie si list existe pour l'action new form
+    listExistNewForm: function(){
 
 	var cotsDb = db.openDB();
         cotsDb.transaction(function(transaction) {
@@ -212,13 +212,27 @@ var db = {
             console.log("Liste exist "+results.rows.length);
             if(results.rows.length !=0){
             	//On affiche bouton retour
-                document.getElementById("btn-cancel").id = "btn-cancel-on";
-
-                //retour a la liste a la fin de finaliser ou nouveau
-                document.getElementById("lien-reload").innerHTML = "Back to the list";
-
+            	document.getElementById("btn-cancel").id = "btn-cancel-on";
             }
-            
+    
+        }, function(transaction,error) {		    
+		    console.log("some error updating data: "+error.message);
+		    return 0;
+		});
+    });
+    },
+
+    //On vérifie si list existe pour CLOSE
+    listExistCLOSE: function(){
+
+	var cotsDb = db.openDB();
+        cotsDb.transaction(function(transaction) {
+        transaction.executeSql(sql.SELECTexistLIST, [], function(transaction, results) {
+            console.log("Liste exist "+results.rows.length);
+            if(results.rows.length !=0){
+            	//retour a la liste a la fin de finaliser ou nouveau
+                document.getElementById("lien-reload").innerHTML = "Retour a la liste";
+            }
     
         }, function(transaction,error) {		    
 		    console.log("some error updating data: "+error.message);
