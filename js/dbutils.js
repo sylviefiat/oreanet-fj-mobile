@@ -231,7 +231,7 @@ var db = {
             console.log("Liste exist "+results.rows.length);
             if(results.rows.length !=0){
             	//retour a la liste a la fin de finaliser ou nouveau
-                document.getElementById("lien-reload").innerHTML = "Retour a la liste";
+                document.getElementById("lien-reload").innerHTML = "Back to the list";
             }
     
         }, function(transaction,error) {		    
