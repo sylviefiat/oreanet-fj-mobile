@@ -267,7 +267,7 @@ var db = {
             	
 
           		//on remplit le tableau
-                  listbdd = "<tr><td data-th='Date creation'>" + results.rows.item(i).date_enregistrement + "</td><td data-th='Date'>" + jour_day + "/" + mois_month + "/" + results.rows.item(i).observation_year + "</td><td data-th='Nbr COTS'>" + results.rows.item(i).observation_number + "</td><td data-th='Place'>" + results.rows.item(i).observation_location + "</td><td data-th='Delete'><button type=button href=# onclick='return app.supprForm("+results.rows.item(i).id+")' class='btn fa fa-trash-o fa-lg'></button></td>" + "</td><td data-th='Finalize'><button type=button href=# onclick='return app.getFormID("+results.rows.item(i).id+")' class='btn fa fa-pencil btn-success'> Finalize</button></td>" + "</tr>";
+                  listbdd = "<tr><td data-th='Date of creation'>" + results.rows.item(i).date_enregistrement + "</td><td data-th='Date of observation'>" + jour_day + "/" + mois_month + "/" + results.rows.item(i).observation_year + "</td><td data-th='Nbr COTS'>" + results.rows.item(i).observation_number + "</td><td data-th='Place'>" + results.rows.item(i).observation_location + "</td><td data-th='Delete'><button type=button href=# onclick='return app.supprForm("+results.rows.item(i).id+")' class='btn fa fa-trash-o fa-lg'></button></td>" + "</td><td data-th='Finalize'><button type=button href=# onclick='return app.getFormID("+results.rows.item(i).id+")' class='btn fa fa-pencil btn-success'> Finalize</button></td>" + "</tr>";
                     parentElement.querySelector('.cot_list_forms').innerHTML +=  listbdd;
                     
                }

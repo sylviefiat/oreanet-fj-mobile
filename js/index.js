@@ -202,7 +202,7 @@ var app = {
                 console.log("validation");
                 if($("#form-cot_admin" ).valid()){
                     //message pour le formulaire sélectionné
-                    app.updateMsg("Your form is incomplete. There are "+ $("#form-cot_admin" ).validate().numberOfInvalids() +" field(s) missing. <a href='#' onclick='return app.cancel()'>Back to the list</a>");
+                    app.updateMsg("<a href='#' onclick='return app.cancel()'>Back to the list</a>");
                     if(document.getElementById("btn-send") != null){
                         document.getElementById("btn-send").id = "btn-send-valid";
                     }
