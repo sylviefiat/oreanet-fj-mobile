@@ -405,17 +405,7 @@ input[type=checkbox], input[type=radio] {
     color: blue;
     margin: 0;
     padding-right: 11px;
-}
-@media (min-width: 410px) {
-#onlinelist {
-    padding-top: 12px;
-}
-}
-
-@media (min-width: 768px) {
-#onlinelist {
-    padding-top: 17px;
-}
+    padding-top: 15px;
 }
 
 /* Offline */ 

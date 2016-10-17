@@ -74,8 +74,6 @@ var app = {
         document.getElementById("offline").style.display = "none";
         //On prend onlinelist css
         document.getElementById("online").id = "onlinelist";
-        //on enlève le bouton send
-        document.getElementById("btn-send").style.display = "none";
 
         var parentElement = document.getElementById("contentlist");
         var listeningElement = parentElement.querySelector('.cot_admin_list');
