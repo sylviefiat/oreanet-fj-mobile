@@ -541,7 +541,7 @@ input[type=checkbox], input[type=radio] {
 }
   
 /*Cancel button*/
-#btn-cancel_save {
+#btns-cancel-save {
     text-align: center;
     height: 6%;
     background: #EEEEEE;
@@ -553,14 +553,17 @@ input[type=checkbox], input[type=radio] {
     border-bottom: 3px groove #DBD7D7;
 
 }
-#btn-cancel {
-  display: inline;
-  width: 40%;
+
+@media (min-width: 480px) {
+  #btn-cancel {
+    display: inline;
+    width: 40%;
+  }
+  #btn-save {
+    display: inline;
+    width: 40%;
+  }
 }
-#btn-save {
-  display: inline;
-  width: 40%;
-} 
 
 /*lien site web*/
 #lien-site-web-off{
