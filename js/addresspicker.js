@@ -21,7 +21,7 @@ if(!bg){
 ;(function ($) {
     "use strict";
     var methods;
-    var defaultCenter = [-17.3608, 179.282654];
+    var defaultCenter = [-17.3608, 179.28265399999998];
 
 	var timer = {};
 	function delay (callback, ms, type){
