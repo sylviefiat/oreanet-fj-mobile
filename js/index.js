@@ -258,31 +258,31 @@ var app = {
         if(range.indexOf("shallow") != -1){
             //console.log("shallow");
             document.getElementById("depth_range0").checked = true;
-            //document.getElementById("label_depth_range0").className = "ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on";
+            document.getElementById("label_depth_range0").className = "ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on";
         } 
 
         if(range.indexOf("medium") != -1){
             //console.log("medium");
             document.getElementById("depth_range1").checked = true;
-            //document.getElementById("label_depth_range1").className = "ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on";
+            document.getElementById("label_depth_range1").className = "ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on";
         }
 
         if(range.indexOf("deep") != -1){
             //console.log("deep");
             document.getElementById("depth_range2").checked = true;
-            //document.getElementById("label_depth_range2").className = "ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on";
+            document.getElementById("label_depth_range2").className = "ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on";
         }
 
         if(method.indexOf("snorkelling") != -1){
             //console.log("snorkelling");
             document.getElementById("observation_method0").checked = true;
-            //document.getElementById("label_observation_method0").className = "ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on";
+            document.getElementById("label_observation_method0").className = "ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on";
         }
 
         if (method.indexOf("scuba diving") != -1){
             //console.log("scuba diving");
             document.getElementById("observation_method1").checked = true;
-            //document.getElementById("label_observation_method1").className = "ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on";
+            document.getElementById("label_observation_method1").className = "ui-btn ui-corner-all ui-btn-inherit ui-btn-icon-left ui-first-child ui-checkbox-on";
         }
 
         document.getElementById('remarks').value = remarks;
