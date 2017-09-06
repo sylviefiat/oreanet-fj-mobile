@@ -642,7 +642,6 @@ var app = {
         } else {
             document.getElementById("counting_method_timed_swim").focus();
             document.getElementById("counting_method_timed_swim").removeAttribute('readonly');
->>>>>>> fix(all): upgrade to latest version of oreanet
         }
     },
 
