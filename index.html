@@ -38,7 +38,7 @@
 				</div>
 				<!-- Splashscreen de la fin -->
 				<div class="event onclose row vertical-align">
-				    <div class="thankyoupage col-md-4 col-md-offset-4">
+				    <div class="thankyoupage col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
 						<img src="img/logo.png" title="logo"/>
 						<p id="msg-fin-enregistre">Thanks for reporting acanthaster in Fidji</p>
 						<p><a id="lien-reload" href="#" onclick="return app.reloadForm()">Report more acanthasters</a></p>
@@ -46,8 +46,8 @@
 						<p><a href="#" onclick="navigator.app.exitApp(); return app.reloadForm();">Exit</a></p>
 				    </div>
 				</div>
-	        </div>
-	        <!-- module d'affichage des messages (erreur ou info) -->
+        </div>
+	    <!-- module d'affichage des messages (erreur ou info) -->
 		    <div id="system-message-container">
 				<div id="system-message">
 				    <div class="alert fade in" id="message">
@@ -58,26 +58,26 @@
 		    </div>
 		    <!-- page principale -->
 		    <div id="contentoff" class="container contenu">	    	
-			<div class="row"> 
+
+			<div class="row">
 				<!-- navbar -->
 				<nav class="navbar navbar-default navbar-fixed-top custom-navbar" role="navigation">
 					<div data-role="header">
 						<div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
 							<button class="ui-btn ui-btn-icon-right fa fa-signal" id="onlinelist"></button>
-					        <button id="btn-refresh" onclick="return app.reloadForm()" class="ui-btn ui-btn-icon-right fa fa-refresh"></button>
-					        <button id="btn-send" onclick="return app.submitForm()" class="ui-btn ui-btn-icon-right fa fa-paper-plane invalid"></button>
-					    </div>
-						<div id="navbar" data-role="collapsible" data-collapsed-icon="bars" data-expanded-icon="delete" class="ui-btn-left ui-mini">
-    						<h6>Report Acanthasters</h6>
-						    <ul data-role="listview">
-						    	<li><a href="#" onclick="return app.showInfoMsg()">Info</a></li>
-						    	<li id="lien-site-menu"><a href="http://oreanet-fj.ird.nc">Visit website</a></li>
-				      		</ul>
+							<button id="btn-refresh" onclick="return app.reloadForm()" class="ui-btn ui-btn-icon-right fa fa-refresh"></button>
+							<button id="btn-send" onclick="return app.submitForm()" class="ui-btn ui-btn-icon-right fa fa-paper-plane invalid"></button>
 						</div>
-					</div>
-				</nav>
-				<!-- /navbar -->
-
+						<div id="navbar" data-role="collapsible" data-collapsed-icon="bars" data-expanded-icon="delete" class="ui-btn-left ui-mini">
+							<h6>Report Acanthasters</h6>
+							<ul data-role="listview">
+								<li><a href="#" onclick="return app.showInfoMsg()">Info</a></li>
+								<li id="lien-site-menu"><a href="http://oreanet-fj.ird.nc">Visit website</a></li>
+							</ul>
+						</div>
+ 					</div>
+ 				</nav>
+				<!-- /navbar --> 
 				<!-- form -->	    
 			    <div class="col-lg-12">
 				<div class="cot_admin_edit front-end-edit">
@@ -172,7 +172,6 @@
 							    <label for="observation_method1" id="label_observation_method1">Scuba diving</label>
 					        </fieldset>
 					    </div>
-
 					    <!-- part V -->
 					    <label><span class="input-group-addon exergue"><span class="fa fa-arrows-v"></span> Depth range</span></label>	
 					    <div data-role="fieldcontain" class="ui-hide-label">
@@ -230,16 +229,16 @@
 					    <!-- part VIII -->
 					    <div id="btns-cancel-save">
 		    				<button id="btn-cancel" style="display:none;" href="#" onclick="return app.cancel()">Back to the list</button>
-		    				<button id="btn-save" style="display:none;" href="#" onclick="return app.saveForm()">Save</button>
+		    				<button id="btn-save" style="display:none;" href="#" onclick="return app.saveForm()">Save</button>		    			
 		    			</div>
 					
 					</form>
-			    	</div>
+			    		</div>
 				</div>
 		    	</div>
 			</div>
 	        </div>
-		</div>
+	</div>
         <script language="javascript" type="text/javascript" src="cordova.js"></script>
         <script language="javascript" type="text/javascript" src="js/index.js"></script>
 		<script language="javascript" type="text/javascript" src="js/sql.js"></script>

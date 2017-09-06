@@ -17,18 +17,19 @@
  * under the License.
  */
 
-
 /* gloabl app management */
 var app = {
     switchOnline: function(isOnline){
         if(isOnline){
             online=document.getElementById("onlinelist");
-            online.innerText = " online";
+
+            online.innerText = " Online";
             online.className = "ui-btn ui-btn-icon-right fa fa-signal online";
             online.removeAttribute("disabled");
         } else {
             online=document.getElementById("onlinelist");
-            online.innerText = " offline";
+
+            online.innerText = " Offline";
             online.className = "ui-btn ui-btn-icon-right fa fa-signal";
             online.setAttribute("disabled","disabled");
         }
@@ -36,7 +37,6 @@ var app = {
     // Application Constructor
     initialize: function() {        
         this.bindEvents();
-        //On affiche online
         app.switchOnline(1);
         // supprime tout message afficher (si il y en a)
         app.closeMsg();
@@ -54,7 +54,8 @@ var app = {
                 //On affiche le formulaire
                 document.getElementById("contentoff").id = "content";
                 //console.log("On affiche le formulaire");
-            },
+
+             },
             // si on EST connecté
             function(){
                 if($('#btn-save').length){  
@@ -116,12 +117,12 @@ var app = {
 
     // direct validation of the form 
     checkStatus: function(e){
-        var idForm = app.getUrlVars()["id"],
-            elems = $('form').find('input:required'),
-            invalid = $.grep(elems, function(n){
-                return(!n.attributes['disabled'] && !n.validity.valid);
-            }),
-            bool = $(invalid).size() == 0;
+        var idform = app.getUrlVars()["id"],
+        elems = $('form').find('input:required'),
+        invalid = $.grep(elems, function(n){
+            return(!n.attributes['disabled'] && !n.validity.valid);
+        }),
+        bool = $(invalid).size() == 0;
         document.getElementById("btn-send").className = "fa fa-paper-plane ui-btn ui-last-child "+(bool?"valid":"invalid");
         // si c'est un formulaire existant qu'on reprend alors on affiche les champs a completer        
         if(bool){
@@ -134,9 +135,8 @@ var app = {
             }
             $(invalid).addClass("error");
         }
-        
-    },
 
+    },
     // Update DOM on a Received Even
     receivedEvent: function(id) {
 
@@ -183,7 +183,7 @@ var app = {
             app.addSubmitForm();
             // ajouter un "validateur" de formulaire
             app.validForm();
-            
+
             $('input:required').change(app.checkStatus);
 
             //teste liste exist ajout du retour a la liste
@@ -202,6 +202,7 @@ var app = {
             if(app.getUrlVars()["lat"] !="" && app.getUrlVars()["lng"] !=""){
                 var lat = app.getUrlVars()["lat"];
                 var lng = app.getUrlVars()["lng"];
+
                 app.addressPickerRedit(lat, lng);
             }
             else {
@@ -213,7 +214,7 @@ var app = {
             app.validForm();
 
             $('input:required').change(app.checkStatus);
-            
+
             //teste liste exist ajout du retour a la liste
             db.listExistNewForm();
             }, 0);
@@ -316,6 +317,7 @@ var app = {
         app.switchOnline(1);
         online.addClass = "online";
         app.reloadForm();
+
     },
     // Turn app to offline mode
     turnOffline: function(){
@@ -410,6 +412,7 @@ var app = {
             function(){
                 app.getFormID("");
             });   
+
     },
 
     updateMsg: function(msg) {
@@ -449,7 +452,7 @@ var app = {
             distanceWidgetRadius: 300,  /* meters */
             appendToAddressString: '',
             geocoderOptions: {
-                language: "fr"
+                language: "en"
             },
             markerOptions: {
             
@@ -530,19 +533,19 @@ var app = {
     addSubmitForm: function(){
         var save = "false";
         $('#form-cot_admin').submit(function() {
-            //console.log("form submit");
-            db.insertCOT($('#observer_name').val(), $('#observer_tel').val(), $('#observer_email').val(), $('#observation_day').val(), $('#observation_month').val(), $('#observation_year').val(),
-                $('#observation_location').val(), $('#observation_localisation').val(), $('#observation_region').val(), 
-                $('#observation_pays').val(),$('#observation_latitude').val(),$('#observation_longitude').val(),
-                $('#observation_number').val(),$('#observation_culled').val(),
-                $('#counting_method_timed_swim').val(), $('#counting_method_distance_swim').val(),$('#counting_method_other').val(),
-                $('#depth_range0').prop('checked')?$('#depth_range0').val():"",
-                $('#depth_range1').prop('checked')?$('#depth_range1').val():"",
-                $('#depth_range2').prop('checked')?$('#depth_range2').val():"",
-                $('#observation_method0').prop('checked')?$('#observation_method0').val():"",
-                $('#observation_method1').prop('checked')?$('#observation_method1').val():"",
-                $('#remarks').val(), app.getDateTime(), save);          
-            return false;
+        //console.log("form submit");
+        db.insertCOT($('#observer_name').val(), $('#observer_tel').val(), $('#observer_email').val(), $('#observation_day').val(), $('#observation_month').val(), $('#observation_year').val(),
+            $('#observation_location').val(), $('#observation_localisation').val(), $('#observation_region').val(), 
+            $('#observation_pays').val(),$('#observation_latitude').val(),$('#observation_longitude').val(),
+            $('#observation_number').val(),$('#observation_culled').val(),
+            $('#counting_method_timed_swim').val(), $('#counting_method_distance_swim').val(),$('#counting_method_other').val(),
+            $('#depth_range0').prop('checked')?$('#depth_range0').val():"",
+            $('#depth_range1').prop('checked')?$('#depth_range1').val():"",
+            $('#depth_range2').prop('checked')?$('#depth_range2').val():"",
+            $('#observation_method0').prop('checked')?$('#observation_method0').val():"",
+            $('#observation_method1').prop('checked')?$('#observation_method1').val():"",
+            $('#remarks').val(), app.getDateTime(), save);            
+        return false;
     }); 
     },
 
@@ -550,7 +553,7 @@ var app = {
     addSubmitExistForm: function(id){
         var save = "false";
         $('#form-cot_admin').submit(function() {
-            //console.log("form submit");
+        //console.log("form submit");
             db.updateFormCot($('#observer_name').val(), $('#observer_tel').val(), $('#observer_email').val(), $('#observation_day').val(), $('#observation_month').val(), $('#observation_year').val(),
                 $('#observation_location').val(), $('#observation_localisation').val(), $('#observation_region').val(), 
                 $('#observation_pays').val(), $('#observation_latitude').val(), $('#observation_longitude').val(),
@@ -563,7 +566,7 @@ var app = {
                 $('#observation_method1').prop('checked')?$('#observation_method1').val():"",
                 $('#remarks').val(), id, save);          
             return false;
-    }); 
+        }); 
     },
 
     saveForm: function(){
@@ -634,31 +637,32 @@ var app = {
 
     enable_timed_swim: function(status) {
         if(!status){
-                document.getElementById("counting_method_timed_swim").value = "";
-                document.getElementById("counting_method_timed_swim").setAttribute('readonly','readonly');
+            document.getElementById("counting_method_timed_swim").value = "";
+            document.getElementById("counting_method_timed_swim").setAttribute('readonly','readonly');
         } else {
-                document.getElementById("counting_method_timed_swim").focus();
-                document.getElementById("counting_method_timed_swim").removeAttribute('readonly');
+            document.getElementById("counting_method_timed_swim").focus();
+            document.getElementById("counting_method_timed_swim").removeAttribute('readonly');
+>>>>>>> fix(all): upgrade to latest version of oreanet
         }
     },
 
     enable_distance_swim: function(status) {
         if(!status){
-                document.getElementById("counting_method_distance_swim").value = "";
-                document.getElementById("counting_method_distance_swim").setAttribute('readonly','readonly');
+            document.getElementById("counting_method_distance_swim").value = "";
+            document.getElementById("counting_method_distance_swim").setAttribute('readonly','readonly');
         } else {
-                document.getElementById("counting_method_distance_swim").focus();
-                document.getElementById("counting_method_distance_swim").removeAttribute('readonly');
+            document.getElementById("counting_method_distance_swim").focus();
+            document.getElementById("counting_method_distance_swim").removeAttribute('readonly');
         }
     },
 
     enable_other: function(status) {
         if(!status){
-                document.getElementById("counting_method_other").value = "";
-                document.getElementById("counting_method_other").setAttribute('readonly','readonly');
+            document.getElementById("counting_method_other").value = "";
+            document.getElementById("counting_method_other").setAttribute('readonly','readonly');
         } else {
-                document.getElementById("counting_method_other").focus();
-                document.getElementById("counting_method_other").removeAttribute('readonly');
+            document.getElementById("counting_method_other").focus();
+            document.getElementById("counting_method_other").removeAttribute('readonly');
         }
     },
 
@@ -674,7 +678,7 @@ var app = {
             	no();
             }
     	}
-	    xhr.open("GET","http://oreanet-fj.ird.nc/index.php?option=com_api&app=restcot&resource=restcot&format=raw&key=c59441eed8f16e754a940b0f8a736f4c",true);
+	xhr.open("GET","http://oreanet-fj.ird.nc/index.php?option=com_api&app=restcot&resource=restcot&format=raw&key=c59441eed8f16e754a940b0f8a736f4c",true);
     	xhr.send();
     },
 

@@ -21,7 +21,8 @@ if(!bg){
 ;(function ($) {
     "use strict";
     var methods;
-    var defaultCenter = [-17.3608, 179.28265399999998];
+
+    var defaultCenter = [-17.3608, 179.282654];
 
 	var timer = {};
 	function delay (callback, ms, type){
@@ -99,7 +100,8 @@ if(!bg){
 		google.maps.event.addListener(that.gmap, "click", function (event) {
 			that.gmarker.setPosition(event.latLng);
 			that.geocodeLookup(event.latLng, false, "latLng", true);
-		});		
+
+		});	
 		var isDefault = (defaultCenter[0] == mapOptions.center.lat()) && (defaultCenter[1] == mapOptions.center.lng());
 		this.gmarker.setVisible(!isDefault);
 	}
@@ -134,7 +136,8 @@ if(!bg){
 				
 		that.gcircle = circle;
 		var isDefault = (defaultCenter[0] == mapOptions.center.lat()) && (defaultCenter[1] == mapOptions.center.lng());
- 		that.gcircle.setVisible(!isDefault);
+
+		that.gcircle.setVisible(!isDefault);	
 		
 		google.maps.event.addListener(that.gcircle, 'radius_changed', function(){
 			that.updater();
@@ -368,6 +371,7 @@ if(!bg){
 				cleanData.radius = Math.round(that.gcircle.getRadius()) / 1000;
 			}
 
+			// Remove zoom when clicking on the map
 			/*if(that.gcircle){				
 				that.gmap.fitBounds(that.gcircle.getBounds());
 			} else {
