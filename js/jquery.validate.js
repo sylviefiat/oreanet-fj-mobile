@@ -18,7 +18,7 @@ $.extend($.fn, {
 		// if nothing is selected, return nothing; can't chain anyway
 		if ( !this.length ) {
 			if ( options && options.debug && window.console ) {
-				console.warn( "Nothing selected, can't validate, returning nothing." );
+				//console.warn( "Nothing selected, can't validate, returning nothing." );
 			}
 			return;
 		}
@@ -479,7 +479,7 @@ $.extend($.validator, {
 			.not( this.settings.ignore )
 			.filter(function() {
 				if ( !this.name && validator.settings.debug && window.console ) {
-					console.error( "%o has no name assigned", this);
+					//console.error( "%o has no name assigned", this);
 				}
 
 				// select only the first element for each name, and only those with rules specified

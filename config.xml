@@ -2,8 +2,8 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "nc.oreanet-fj.mobile"
-        versionCode = "1" 
-        version     = "0.0.3" >
+        versionCode = "1.0.1" 
+        version     = "1.0.1" >
 
     <!-- versionCode is optional and Android only -->
 
@@ -13,7 +13,7 @@
         Help us prevent Crowns of thorns risks on coral reef ecosystems by reporting them using Oreanet FJ mobile application.
     </description>
    
-    <icon src="pin5-oreanet.png" />
+    <icon src="oreanet_fj_app.png" />
 
     <author href="https://oreanet-fj.ird.nc" email="sylvie.fiat@ird.fr">
         IRD, FIDJI USP
@@ -27,5 +27,8 @@
     
     <gap:plugin name="cordova-plugin-whitelist" source="npm" version="1.0.0" />
     <gap:allow-navigation href="http://rest-oreanet.ird.nc/*" />
+    <gap:allow-navigation href="./index.html" />
+    <gap:allow-navigation href="./list.html" />
+    <gap:allow-navigation href="./index.html?id=" />
 
 </widget>
