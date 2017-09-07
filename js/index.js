@@ -88,7 +88,7 @@ var app = {
         );
 
         //dev mobile
-        setTimeout(function(){app.receivedEvent('deviceready');},0);
+        //setTimeout(function(){app.receivedEvent('deviceready');},0);
     
     },
 
@@ -124,7 +124,7 @@ var app = {
 
     // direct validation of the form 
     checkStatus: function(e){
-        var idform = app.getUrlVars()["id"],
+        var idForm = app.getUrlVars()["id"],
         elems = $('form').find('input:required'),
         invalid = $.grep(elems, function(n){
             return(!n.attributes['disabled'] && !n.validity.valid);
