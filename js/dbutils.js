@@ -41,7 +41,7 @@ var db = {
 					+(depth_range2.length>0?depth_range2:"");
 		var observation_method = (observation_method0.length > 0 ? observation_method0 : "")
 					+((observation_method0.length>0 && observation_method1.length) > 0 ? ", " : "")
-					+(observation_method1.length>0?observation_method1:"");		
+					+(observation_method1.length>0?observation_method1:"");
 
 		cotsDb.transaction(function(transaction) {
 			transaction.executeSql(sql.INSERT, 
@@ -253,15 +253,12 @@ var db = {
 
     //Affichage de la liste
     listCOT: function(){
-
 	var parentElement = document.getElementById("contentlist");
     var listeningElement = parentElement.querySelector('.cot_admin_list');
-
 	var cotsDb = db.openDB();
     cotsDb.transaction(function(transaction) {
         transaction.executeSql(sql.SELECTCOTLIST, [], function(transaction, results) {
             //console.log("Nombre de formulaire(s) a consulter "+ results.rows.length);
-
         	app.updateMsg("You have " + results.rows.length + " form(s) to complete. Thank you for helping us protect Fiji's reefs.");
 
             for (i = 0; i < results.rows.length; i++){ 

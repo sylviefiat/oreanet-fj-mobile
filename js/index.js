@@ -44,6 +44,7 @@ var app = {
         this.bindEvents();
         // set default dateformat
         app.datepickerDefaut();
+        //On enlève offline
         app.switchOnline(1);
         // supprime tout message afficher (si il y en a)
         app.closeMsg();
@@ -61,8 +62,7 @@ var app = {
                 //On affiche le formulaire
                 document.getElementById("contentoff").id = "content";
                 //console.log("On affiche le formulaire");
-
-             },
+            },
             // si on EST connecté
             function(){
                 if($('#btn-save').length){  
@@ -181,7 +181,6 @@ var app = {
             setTimeout(function(){
             
             //console.log("<<<<<formulaire non existant>>>>");
-
             // supprime tout message afficher (si il y en a)
             app.closeMsg();
             // démarrer le plugin addressPicker
@@ -209,7 +208,6 @@ var app = {
             if(app.getUrlVars()["lat"] !="" && app.getUrlVars()["lng"] !=""){
                 var lat = app.getUrlVars()["lat"];
                 var lng = app.getUrlVars()["lng"];
-
                 app.addressPickerRedit(lat, lng);
             }
             else {
@@ -219,9 +217,7 @@ var app = {
             app.addSubmitExistForm(id);
             // ajouter un "validateur" de formulaire
             app.validForm();
-
             $('input:required').change(app.checkStatus);
-
             //teste liste exist ajout du retour a la liste
             db.listExistNewForm();
             }, 0);

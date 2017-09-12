@@ -1,0 +1,1 @@
+var url_oreanet="http://oreanet-fj.ird.nc/index.php?option=com_api&app=restcot&resource=restcot&format=raw&key=8c2eb2d47b66f0789a9245b226d1304b";
